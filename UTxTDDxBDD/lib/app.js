@@ -18,14 +18,14 @@ $(function () {
                     title: "Unit Test",
                     subtitle: "Faça como Elize Matsunaga, divida tudo em pequenas partes",
                     list: [
-                        "menores unidades de código do seu sistema",
+                        "teste das menores unidades de código do seu sistema",
                         "devem ser isolados de qualquer dependência",
                         "simples, fácil de escrever e rodar."
                     ]
                 },
                 {
                     title: "TDD",
-                    subtitle: "Make it work. Make it right. Make it fast. - Kent Beck",
+                    subtitle: '"Make it work. Make it right. Make it fast." - Kent Beck',
                     text: "A especificação dos teste antecedem o desenvolvimento do código",
                     list: [
                         "RED, GREE, REFACTOR",
@@ -37,13 +37,37 @@ $(function () {
                 },
                 {
                     title: "Why TDD?",
-                    subtitle: "Eu não falhei. Apenas descobri 10 mil maneiras que não funcionam. - Thomas Edison",
+                    subtitle: '"Eu não falhei. Apenas descobri 10 mil maneiras que não funcionam." - Thomas Edison',
                     list: [
                         "Segurança na realização de modificações",
                         "Maior confiabilidade do código",
                         "Grande cobertura de código",
+                        "Quanto mais erros você descobre, menos problemas são passados para o cliente",
                         "Quanto mais específico o teste fica, mais generalista o código fica"
                     ]
+                },
+                {
+                    title: "BDD",
+                    subtitle: "Não teste implementação, teste comportamento",
+                    list: [
+                        "Conjunto de boas praticas para escrita de testes",
+                        "Integram-se regras de negócio com linguagem de programação",
+                        "Teste costumam ser escritos com linguagem mais próxima aos clientes",
+                        "Pessoas de fora da equipe de desenvolvimento participam da especificação dos testes"
+                    ]
+                },
+                {
+                    title: "Why BDD?",
+                    subtitle: "Abstrai-se como o sistema foi desenvolvido, e importa-se em como ele funciona",
+                    list: [
+                        "Comunicação entre as equipes",
+                        "Documentação dinâmica",
+                        "Visão do todo",
+                        "Software funcionando do jeito que o cliente precisa"
+                    ]
+                },
+                {
+                    title: "Thanks"
                 }
             ],
                 selected = 0

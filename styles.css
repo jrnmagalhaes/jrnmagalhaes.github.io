@@ -1,5 +1,6 @@
 body{
     margin: 0;
+    background-color: #084a9e;
 }
 h1{
     font-size: 60px;
@@ -18,7 +19,6 @@ ul>li, p{
 .presentation{
     display: flex;
     height: 100vh;
-    background-color: #084a9e;
     color: white;
     flex-direction: column;
 }
