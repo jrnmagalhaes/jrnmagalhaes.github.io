@@ -96,13 +96,24 @@ $(function () {
         },
         getSelectedSlide: function() {
             return model.selectedSlide();
+        },
+        handleKeyPress: function (e) {
+            e = e || window.event;
+
+            if (e.keyCode == '37') {
+                controller.previewsSlide();
+            }
+            else if (e.keyCode == '39') {
+                controller.nextSlide();
+            }
         }
     };
 
     var sliderView = {
         init: function () {
-            $('#previous').click( () => controller.previewsSlide())
-            $('#next').click( () => controller.nextSlide())
+            $('#previous').click( () => controller.previewsSlide());
+            $('#next').click( () => controller.nextSlide());
+            document.onkeydown = controller.handleKeyPress;
             sliderView.render();
         },
         cleanUpInterface: function () {
