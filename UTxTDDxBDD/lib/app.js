@@ -8,7 +8,7 @@ $(function () {
                 {
                     title: "Ricardo Nogueira",
                     subtitle: "CTO at Absam",
-                    text: "UnitTest x TDD x BDD - What the fuck is that shit"
+                    text: "Unit Test x TDD x BDD - What the fuck is that shit"
                 },
                 {
                     title: "DEMO",
@@ -28,7 +28,7 @@ $(function () {
                     subtitle: '"Make it work. Make it right. Make it fast." - Kent Beck',
                     text: "A especificação dos teste antecedem o desenvolvimento do código",
                     list: [
-                        "RED, GREE, REFACTOR",
+                        "RED, GREEN, REFACTOR",
                         "Escreve-se testes que não irão passar - RED",
                         "Desenvolve-se o mínimo de código necessário para passar nos testes - GREEN",
                         "Refatora-se o código para melhorar performance e organização",
