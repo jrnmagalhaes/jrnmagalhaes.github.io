@@ -7,7 +7,7 @@ $(function () {
             slides = [
                 {
                     title: "Ricardo Nogueira",
-                    subtitle: "CTO at Absam",
+                    subtitle: "Lead Software Engineer at Absam.io",
                     text: "Unit Test x TDD x BDD - What the fuck is that shit"
                 },
                 {
