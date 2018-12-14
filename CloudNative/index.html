@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../styles.css">
+    <title>Cloud Native  -  Pra você que sempre sonhou em voar entre as nuvens</title>
+</head>
+<body>
+    <div class="presentation" id="full">
+        <div class="slide" id="slideArea">
+            
+        </div>
+        <div class="buttons">
+            <button id="full-button">FullScreen</button>
+            <button id="previous">Prev</button>
+            <button id="next">Next</button>
+        </div>
+    </div>
+
+    <template id="cover">
+        <img id="image">
+        <hr>
+        <h1 id="title"></h1>
+        <h2 id="subtitle"></h2>
+        <p id="text"></p>
+    </template>
+
+    <template id="regular">
+        <h1 id="title"></h1>
+        <h2 id="subtitle"></h2>
+        <p id="text"></p>
+        <ul id="list"></ul>
+    </template>
+
+    <template id="image-full">
+        <h2 id="subtitle"></h2>
+        <img class="mt-100" id="image" alt="">
+    </template>
+
+    <template id="image-right">
+        <div class="linha-flex space-around flex-align-center">
+            <div>
+                <h1 id="title"></h1>
+                <h2 id="subtitle"></h2>
+                <p id="text"></p>
+                <ul id="list"></ul>
+            </div>
+            <div>
+                <img id="image" alt="">
+            </div>
+        </div>
+    </template>
+
+    <script
+        src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="lib/app.js"></script>
+</body>
+</html>

@@ -28,6 +28,11 @@ ul>li, p{
     color: white;
     flex-direction: column;
 }
+.mt-100 {
+    margin-top: 100px;
+}
+
+
 /* Profile */
 .profile{
     flex: 1;
@@ -41,7 +46,7 @@ ul>li, p{
     flex-shrink: 0;
     align-self: center;
 }
-.profile .pic{
+.profile .pic, .profile-pic{
     width: 250px;
     height: 250px;
     border-radius: 50%;
@@ -54,6 +59,7 @@ ul>li, p{
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    padding: 0 100px;
 }
 .buttons{
     padding: 20px 10px;
@@ -69,8 +75,22 @@ ul>li, p{
     opacity: 0.8;
     cursor: pointer;
 }
-.buttons button:first-of-type{
+.buttons button{
     margin-right: 10px;
+}
+
+/**
+    Containers
+**/
+.linha-flex{
+    display: flex;
+    width: 100%;
+}
+.space-around {
+    justify-content: space-around;
+}
+.flex-align-center {
+    align-items: center;
 }
 
 /**
@@ -111,4 +131,11 @@ ul>li, p{
     hr {
         display: none;
     }
+}
+
+/**
+    Lista
+**/
+ul {
+    padding-left: 50px;
 }
