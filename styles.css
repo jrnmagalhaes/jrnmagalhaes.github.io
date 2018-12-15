@@ -92,7 +92,18 @@ ul>li, p{
 .flex-align-center {
     align-items: center;
 }
-
+.padronized-padding div{
+    padding: 0 50px;
+}
+/**
+    Itens
+**/
+.flex-3 {
+    flex: 3
+}
+.flex-2 {
+    flex: 2
+}
 /**
     YAML
 **/
@@ -138,4 +149,14 @@ ul>li, p{
 **/
 ul {
     padding-left: 50px;
+}
+
+/**
+    Helpers
+**/
+.width-100 {
+    width: 100%;
+}
+.width-50 {
+    width: 50%;
 }
