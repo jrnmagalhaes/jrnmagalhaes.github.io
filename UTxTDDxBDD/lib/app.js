@@ -100,10 +100,10 @@ $(function () {
         handleKeyPress: function (e) {
             e = e || window.event;
 
-            if (e.keyCode == '37') {
+            if (e.keyCode == '37' || e.keyCode == '33') {
                 controller.previewsSlide();
             }
-            else if (e.keyCode == '39') {
+            else if (e.keyCode == '39' || e.keyCode == '34') {
                 controller.nextSlide();
             }
         }
