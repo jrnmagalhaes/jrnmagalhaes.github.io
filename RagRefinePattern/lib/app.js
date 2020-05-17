@@ -11,6 +11,9 @@ $(function () {
     },
     getResults: function () {
       return results
+    },
+    reset: function () {
+      results = [];
     }
   };
 
@@ -28,6 +31,10 @@ $(function () {
       model.addResult("F")
       view.render();
     },
+    reset: function () {
+      model.reset();
+      view.render();
+    },
     results: function() {
       return model.getResults();
     },
@@ -42,6 +49,7 @@ $(function () {
     init: function () {
       $('#success').click(() => controller.success());
       $('#fail').click(() => controller.fail());
+      $('#reset').click(() => controller.reset());
       document.onkeydown = controller.handleKeyPress;
       view.render();
     },
