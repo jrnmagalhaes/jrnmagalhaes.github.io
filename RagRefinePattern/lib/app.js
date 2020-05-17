@@ -1,19 +1,20 @@
 $(function () {
 
   var model = {
-    slides: [],
-    selected: 0,
+    results: [],
+    patterns: {},
     init: function () {
       results = []
     },
     addResult: function (value) {
-      results.push(value);
+      this.results.push(value);
     },
     getResults: function () {
-      return results
+      return this.results
     },
     reset: function () {
-      results = [];
+      this.results = [];
+      this.patterns = {};
     }
   };
 
@@ -27,7 +28,7 @@ $(function () {
       model.addResult("S")
       view.render();
     },
-    fail: function (index) {
+    fail: function () {
       model.addResult("F")
       view.render();
     },
@@ -35,12 +36,48 @@ $(function () {
       model.reset();
       view.render();
     },
-    results: function() {
-      return model.getResults();
+    results: function () {
+      return model.getResults().join("");
+    },
+    searchPatterns: function () {
+      return new Promise(function (resolve, reject) {
+        let results = [...model.getResults()];
+        let patterns = {};
+        let auxPattern = "";
+        let auxMatches = 0;
+        for (let i = 4; i < results.length; i++) {
+          for (let c = 0; c <= results.length - i; c++) {
+            auxPattern = results.splice(c, i);
+            auxMatches = model.getResults().join("").match(new RegExp(auxPattern.join(""), "g")).length
+            if (auxMatches > 1) {
+              if (!(auxPattern.join("") in patterns) && auxPattern[auxPattern.length - 1] != "F") {
+                patterns[auxPattern.join("")] = auxMatches;
+              }
+            }
+            results = [...model.getResults()];
+          }
+        }
+        for (var key in patterns) {
+          if (patterns.hasOwnProperty(key)) {
+            for (let chave in patterns) {
+              if (patterns.hasOwnProperty(chave) && chave != key) {
+                if (chave.match(key)) {
+                  delete patterns[key];
+                }
+              }
+            }
+          }
+        }
+        resolve(patterns);
+      })
     },
     handleKeyPress: function (e) {
       e = e || window.event;
-      console.log(e);
+      if (e.keyCode == 70) {
+        controller.fail();
+      } else if (e.keyCode == 83) {
+        controller.success();
+      }
     },
 
   };
@@ -58,10 +95,20 @@ $(function () {
     },
     render: function () {
       view.cleanUpInterface();
-      $('#results').val(controller.results().join(""));
-      console.log("results:", controller.results().join(""));
+      $('#results').val(controller.results());
+      controller.searchPatterns()
+        .then(patterns => {
+          console.log(patterns);
+          for (var key in patterns) {
+            // check if the property/key is defined in the object itself, not in parent
+            if (patterns.hasOwnProperty(key)) {
+                $('#patterns table tbody').append("<tr><td>"+key+"</td><td>"+patterns[key]+"</td></tr>")
+            }
+        }
+        })
     }
   }
 
   controller.init();
 });
+

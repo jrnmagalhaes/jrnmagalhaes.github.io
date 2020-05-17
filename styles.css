@@ -1,40 +1,50 @@
 @import url('https://fonts.googleapis.com/css?family=PT+Mono');
 
-body{
+body {
     margin: 0;
     background-color: #1E1E1E;
     font-family: 'PT Mono', monospace;
 }
+
 hr {
     margin: 30px 0;
 }
+
 h1 {
     font-size: 60px;
     margin: 0;
 }
-h2{
+
+h2 {
     font-size: 40px;
     margin: 0;
 }
-ul{
+
+ul {
     padding: 0;
 }
-ul>li, p{
+
+ul>li,
+p {
     font-size: 30px;
 }
-.presentation{
+
+.presentation {
     display: flex;
     height: 100vh;
     color: white;
     flex-direction: column;
 }
+
 .presentation.ragnarok {
     background-image: url('./ragnarok-bg.jpg');
     background-size: cover;
 }
+
 .mt-100 {
     margin-top: 100px;
 }
+
 .regular-button {
     padding: 10px 20px;
     border-radius: 5px;
@@ -46,40 +56,47 @@ ul>li, p{
     color: white;
     margin: 10px 0;
 }
+
 .regular-button:hover {
     cursor: pointer;
     opacity: 0.6;
 }
+
 .regular-button.success {
     background-color: rgba(95, 231, 41, 0.9);
     color: white;
 }
+
 .regular-button.fail {
     background-color: rgba(231, 41, 41, 0.9);
     color: white;
 }
 
 /* Profile */
-.profile{
+.profile {
     flex: 1;
     display: flex;
     justify-content: space-around;
     align-content: center;
     flex-wrap: wrap;
 }
-.profile>div{
+
+.profile>div {
     flex-grow: 0;
     flex-shrink: 0;
     align-self: center;
 }
-.profile .pic, .profile-pic{
+
+.profile .pic,
+.profile-pic {
     width: 250px;
     height: 250px;
     border-radius: 50%;
     border: 5px solid white;
 }
+
 /* Slides */
-.slide{
+.slide {
     flex: 1;
     display: flex;
     justify-content: center;
@@ -87,21 +104,25 @@ ul>li, p{
     align-items: center;
     padding: 0 100px;
 }
-.buttons{
+
+.buttons {
     padding: 20px 10px;
     display: flex;
     justify-content: flex-end
 }
-.buttons button{
+
+.buttons button {
     border: none;
     border-radius: 10px;
     padding: 8px 5px
 }
-.buttons button:hover{
+
+.buttons button:hover {
     opacity: 0.8;
     cursor: pointer;
 }
-.buttons button{
+
+.buttons button {
     margin-right: 10px;
 }
 
@@ -115,67 +136,82 @@ ul>li, p{
     align-items: center;
     flex-wrap: wrap;
 }
+
 .coluna-flex {
     display: flex;
     flex-direction: column;
 }
-.linha-flex{
+
+.linha-flex {
     display: flex;
     width: 100%;
 }
+
 .space-around {
     justify-content: space-around;
 }
+
 .flex-align-center {
     align-items: center;
 }
-.padronized-padding div{
+
+.padronized-padding div {
     padding: 0 50px;
 }
+
 /**
     Itens
 **/
 .flex-3 {
     flex: 3
 }
+
 .flex-2 {
     flex: 2
 }
+
 /**
     YAML
 **/
 .yaml {
     font-size: 30px;
 }
-.yaml div{
+
+.yaml div {
     margin-left: 20px;
 }
+
 .yaml .key {
     color: #5586AF;
 }
+
 .yaml .value {
     color: #9A7464;
     text-decoration: none;
 }
+
 .yaml a.value:hover {
     cursor: pointer;
     opacity: 0.8;
 }
+
 .yaml .comon-structure {
     color: white;
 }
 
 @media(max-width: 768px) {
-    .profile .pic{
+    .profile .pic {
         width: 200px;
         height: 200px;
         margin-top: 30px;
     }
+
     .yaml {
         font-size: 24px;
         margin-bottom: 30px;
         padding-left: 20px;
     }
+
     hr {
         display: none;
     }
@@ -194,6 +230,7 @@ ul {
 .width-100 {
     width: 100%;
 }
+
 .width-50 {
     width: 50%;
 }
@@ -207,4 +244,31 @@ ul {
     margin-left: 50px;
     font-size: 16px;
     padding: 20px;
+}
+
+.rag-container .patterns {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 5px;
+    margin-left: 50px;
+    color: white;
+}
+
+.rag-container p {
+    font-size: 18px;
+}
+
+.table {
+    width: 100%;
+    margin-bottom: 1rem;
+    background-color: transparent;
+}
+.table thead th {
+    vertical-align: bottom;
+    border-bottom: 2px solid #dee2e6;
+}
+.table td, .table th {
+    padding: .75rem;
+    vertical-align: top;
+    border-top: 1px solid #dee2e6;
 }
