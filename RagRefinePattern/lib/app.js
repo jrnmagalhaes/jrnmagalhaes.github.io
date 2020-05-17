@@ -42,6 +42,7 @@ $(function () {
     searchPatterns: function () {
       return new Promise(function (resolve, reject) {
         let results = [...model.getResults()];
+        console.log(results);
         let patterns = {};
         let auxPattern = "";
         let auxMatches = 0;
@@ -92,6 +93,7 @@ $(function () {
     },
     cleanUpInterface: function () {
       $('#results').val("");
+      $('#patterns table tbody').empty();
     },
     render: function () {
       view.cleanUpInterface();
