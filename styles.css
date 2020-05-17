@@ -31,7 +31,20 @@ ul>li, p{
 .mt-100 {
     margin-top: 100px;
 }
-
+.regular-button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 0.8);
+    margin: 10px 0;
+}
+.regular-button:hover {
+    cursor: pointer;
+    opacity: 0.6;
+}
 
 /* Profile */
 .profile{
@@ -82,6 +95,17 @@ ul>li, p{
 /**
     Containers
 **/
+.rag-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.coluna-flex {
+    display: flex;
+    flex-direction: column;
+}
 .linha-flex{
     display: flex;
     width: 100%;
@@ -159,4 +183,15 @@ ul {
 }
 .width-50 {
     width: 50%;
+}
+
+/**
+    Rag
+**/
+.rag-container textarea {
+    border-radius: 5px;
+    border: none;
+    margin-left: 50px;
+    font-size: 16px;
+    padding: 20px;
 }
