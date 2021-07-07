@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css?family=PT+Mono');
+@import url("https://fonts.googleapis.com/css?family=PT+Mono");
 
 body {
     margin: 0;
-    background-color: #1E1E1E;
-    font-family: 'PT Mono', monospace;
+    background-color: #1e1e1e;
+    font-family: "PT Mono", monospace;
 }
 
 hr {
@@ -24,7 +24,7 @@ ul {
     padding: 0;
 }
 
-ul>li,
+ul > li,
 p {
     font-size: 30px;
 }
@@ -37,7 +37,7 @@ p {
 }
 
 .presentation.ragnarok {
-    background-image: url('./ragnarok-bg.jpg');
+    background-image: url("./ragnarok-bg.jpg");
     background-size: cover;
 }
 
@@ -81,7 +81,7 @@ p {
     flex-wrap: wrap;
 }
 
-.profile>div {
+.profile > div {
     flex-grow: 0;
     flex-shrink: 0;
     align-self: center;
@@ -108,13 +108,13 @@ p {
 .buttons {
     padding: 20px 10px;
     display: flex;
-    justify-content: flex-end
+    justify-content: flex-end;
 }
 
 .buttons button {
     border: none;
     border-radius: 10px;
-    padding: 8px 5px
+    padding: 8px 5px;
 }
 
 .buttons button:hover {
@@ -163,11 +163,11 @@ p {
     Itens
 **/
 .flex-3 {
-    flex: 3
+    flex: 3;
 }
 
 .flex-2 {
-    flex: 2
+    flex: 2;
 }
 
 /**
@@ -182,11 +182,11 @@ p {
 }
 
 .yaml .key {
-    color: #5586AF;
+    color: #5586af;
 }
 
 .yaml .value {
-    color: #9A7464;
+    color: #9a7464;
     text-decoration: none;
 }
 
@@ -199,15 +199,22 @@ p {
     color: white;
 }
 
-@media(max-width: 768px) {
+@media (max-width: 768px) {
+    .profile {
+        justify-content: flex-start;
+    }
+    .profile > div:first-of-type {
+        width: 100%;
+        text-align: center;
+    }
     .profile .pic {
         width: 200px;
         height: 200px;
-        margin-top: 30px;
+        margin: 30px 0;
     }
 
     .yaml {
-        font-size: 24px;
+        font-size: 20px;
         margin-bottom: 30px;
         padding-left: 20px;
     }
@@ -267,8 +274,9 @@ ul {
     vertical-align: bottom;
     border-bottom: 2px solid #dee2e6;
 }
-.table td, .table th {
-    padding: .75rem;
+.table td,
+.table th {
+    padding: 0.75rem;
     vertical-align: top;
     border-top: 1px solid #dee2e6;
 }
